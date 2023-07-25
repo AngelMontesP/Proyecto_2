@@ -4,8 +4,8 @@ const ocultar = document.getElementById('btnCerrarSesion');
 const ocultarinicio = document.getElementById('btniniciarSesion');
 const accionCerrarSesion= document.getElementById('btnCerrarSesion');
 const accconsultarsaldo = document.getElementById('btnConsultarSaldo');
-
-
+const accingresar = document.getElementById('btnIngresar');
+const accRetirar =  document.getElementById('btnRetirar');
 mostrar.style.visibility ='hidden';
 ocultar.style.visibility = 'hidden';
 
@@ -24,13 +24,22 @@ return true;
 }
 
 function validarSuma(saldoActual,montoIngresar){
-
+if((saldoActual + montoIngresar)> 990){
+  window.alert("Monto que supera el limite de la cuenta");
+  return false;
+}else if((saldoActual + montoIngresar)<= 990){
+return true;
+}
 }
 
-function validarResta(saldoActual,montoIngresar){
-  
+function validarResta(saldoActual,montoRestar){
+  if((saldoActual - montoRestar) < 10){
+    window.alert("Monto que deja monto minimo en cuenta");
+    return false;
+  }else if((saldoActual - montoRestar) >= 10){
+  return true;
+  }
 }
-
 
 btnLogin.addEventListener('click',function(){
   var x=0;
@@ -65,4 +74,20 @@ accionCerrarSesion.addEventListener('click',function(){
 
 accconsultarsaldo.addEventListener('click',function(){
 window.alert("El saldo actual es de: " + cuentas[sesionIniciada].saldo);
+});
+
+accingresar.addEventListener('click',function(){
+  let montoIngresar = prompt('Ingrese monto:');
+if(validarSuma(cuentas[sesionIniciada].saldo, parseInt(montoIngresar))== true){
+  cuentas[sesionIniciada].saldo = parseInt(cuentas[sesionIniciada].saldo + parseInt(montoIngresar));
+  window.alert("El saldo actual es de: " + cuentas[sesionIniciada].saldo);
+}
+});
+
+accRetirar.addEventListener('click',function(){
+  let montoRetirar = prompt('Ingrese monto:');
+if(validarResta(cuentas[sesionIniciada].saldo, parseInt(montoRetirar))== true){
+  cuentas[sesionIniciada].saldo = parseInt(cuentas[sesionIniciada].saldo - parseInt(montoRetirar));
+  window.alert("El saldo actual es de: " + cuentas[sesionIniciada].saldo);
+}
 });
