@@ -5,31 +5,59 @@
     border: 0
 }
 .cabecera{
-    background-color:#a71d34;
+    background-color:#002B5B;
+    align-items: center;
+}
+h3{
+    color:#bfe7e2;
+    font-family:Calibri;
+    text-align: center;  
+    color: #002B5B;  
+    background-color:rgb(21, 152, 149); 
+    padding: 10px;
+}
+h4{
+    color:#ffffff;
+    font-family:Calibri;
+    text-align: center;
+}
+li{
+    color:#ffffff;
+    font-family:Calibri;
+    text-align: center;
+}
+h5{
+    color:#bfe7e2;
+    font-family:Calibri;
+    text-align: right;
+}
+h2{
+    font-family:Calibri;
+    margin: 1rem;
+    color: rgb(190, 179, 19); 
 }
 h1{
-    color: hsl(64, 81%, 85%);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-.inicioSesion{
-background-color: #a71d34;
-    border-radius: 10px;
-    display: flex;
-    border-color: #a71d34;
-    border:20px;
+    color:#bfe7e2;
+    font-family:Calibri;
     text-align: center;
-  margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 3rem;
+}
+
+.datosCte{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+.datosMonto{
+    display: flex;
     flex-direction: column;
-    max-height: 200px;
-    max-width: 300px;
 }
 .entrada{
     border: 10px;
     padding: 10px;
     margin: 1rem;
+    border-radius: 10px;
 }
 .password{
     border: 10px;
@@ -41,16 +69,129 @@ background-color: #a71d34;
     margin: 1rem;
 }
 .btnaccion{
-    border-color: #a71d34;
+    border-color: #159895;
     border:10px;
     padding: 10px;
     margin:10px;
 }
 .btnacciondiv{
-    background-color: #a71d34;
-    text-align: center;
-    margin: 1rem;
+    background-color: #159895;
+        border-radius: 10px;
+        display: flex;
+        border:3px;
+        text-align: center;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 3rem;
+        flex-direction: column;
+        border-color: #195ca8;
+        border:3px;
+        border-style: solid;
+        box-shadow: 2px 4px 10px 4px rgb(24, 134, 185);
+        
+}
+.inicioSesion{
+   background-color: #159895;
+       border-radius: 10px;
+        display: flex;
+        border-color: #195ca8;
+        border:3px;
+        border-style: solid;
+        text-align: center;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 3rem;
+        flex-direction: column;
+       box-shadow: 2px 4px 10px 4px rgb(24, 134, 185);
+    }
+
+
+.btn{
+    border-width: 4px;
+   border-radius: 12px;
+   border-color:#1A5F7A ;
+   -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+}
+.btn:hover{
+    background-color: #002B5B; /* Green */
+    color: white;
+}
+.contenedor{
+display: flex;
+justify-content: space-around;
+}
+.alertas{
+display: flex;
+justify-content: space-evenly;
+font-family:Calibri;
+}
+.alerta{
+    border-radius: 15px;
+    border-bottom: #002B5B;
+    border-style:solid;
+    -webkit-transition-duration: 1s; 
+    transition-duration: 0.48s;
+}
+.sesionNoIniciada{
+    display: flex; 
+    justify-content: center; 
+    size: 30%;
+}
+.sesion{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.pieDePagina{
+    display: flex; 
+    justify-content: center;
+    background-color: #002B5B;
+    padding-top: .7rem;
+    padding-bottom: .5rem;
+}
+.partesFooter{
+    display: flex; 
+    align-items: flex-start;
+    background-color: #002B5B;
     flex-direction: column;
-    max-height: 180px;
-    max-width: 300px;
+    margin-right:2rem;
+    margin-left: 2rem;
+}
+.saldoCambio{
+        -webkit-transition-duration: 1s; 
+        transition-duration: 0.48s;
+        font-size: xx-large;
+    }
+.footColor{
+    color:#bfe7e2;
+    font-family:Calibri;
+    font-size: large;;
+}
+.fondo{
+    background-image: radial-gradient(circle at 82.81% 31.06%, #fffff4 0, #fdfff1 5.56%, #f6ffed 11.11%, #edfde8 16.67%, #e2f9e3 22.22%, #d6f4de 27.78%, #c8efda 33.33%, #b7ead5 38.89%, #a4e3d2 44.44%, #8edccf 50%, #76d5ce 55.56%, #5dcdce 61.11%, #42c7d0 66.67%, #1dc1d4 72.22%, #00bbd8 77.78%, #00b5dc 83.33%, #00b0e0 88.89%, #00abe4 94.44%, #00a7e7 100%);
+}
+.icon:hover{
+    -webkit-transition-duration: 1s; 
+    transition-duration: 0.48s;
+    color: #fdfff1;
+}
+.icon{
+    -webkit-transition-duration: 1s; 
+    transition-duration: 0.48s;
+    color:#002B5B;
+}
+.iconMap{
+    color:#ffffff;
+}
+.ubicacionIcon{
+    display: flex; 
+    justify-content: center;
+}
+.labelUbi{
+    margin-left: .7rem;
+}
+.iconMoney{
+    margin-top: 1rem;
 }
